@@ -3,10 +3,16 @@ import data from './data'
 import './index.css'
 
 const Accordion = () => {
-  const [selected, setSelected] = useState(null)
+  const [selected, setSelected] = useState([])
 
   const handleSelection = id => {
-    setSelected(selected === id ? null : id)
+    let newSelected = selected.slice()
+    if (newSelected.includes(id)) {
+      newSelected.splice(newSelected.indexOf(id))
+    } else {
+      newSelected.push(id)
+    }
+    setSelected(newSelected)
   }
 
   return (
@@ -17,7 +23,7 @@ const Accordion = () => {
           return (
             <li key={id} onClick={() => handleSelection(id)}>
               <h3>{question} <span className="triangle">▽</span> </h3>
-              {selected === id && <p>{answer}</p>}
+              {selected.includes(id) && <p>{answer}</p>}
             </li>
           )
         })
