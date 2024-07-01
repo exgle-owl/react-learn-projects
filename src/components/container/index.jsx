@@ -1,9 +1,9 @@
 import './index.css'
 
 const Container = ({ children }) => (
-  <section className="container">
+  <div className="container">
     {children}
-  </section>
+  </div>
 )
 
 export default Container
