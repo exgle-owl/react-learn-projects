@@ -8,7 +8,7 @@ const Accordion = () => {
   const handleSelection = id => {
     let newSelected = selected.slice()
     if (newSelected.includes(id)) {
-      newSelected.splice(newSelected.indexOf(id))
+      newSelected.splice(newSelected.indexOf(id), 1)
     } else {
       newSelected.push(id)
     }
