@@ -1,6 +1,7 @@
 import Accordion from "./components/accordion"
 import Container from "./components/container"
 import ImageSlider from "./components/image-slider"
+import ProductList from "./components/product-list"
 import RandomColor from "./components/random-color"
 import StarRating from "./components/star-rating"
 
@@ -19,6 +20,7 @@ const App = () => {
       <Container>
         <ImageSlider />
       </Container>
+      <ProductList />
     </>
   )
 }
