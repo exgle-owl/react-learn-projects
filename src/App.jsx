@@ -3,11 +3,13 @@ import Container from "./components/container"
 import ImageSlider from "./components/image-slider"
 import ProductList from "./components/product-list"
 import RandomColor from "./components/random-color"
+import ScrollIndicator from "./components/scroll-indicator"
 import StarRating from "./components/star-rating"
 
 const App = () => {
   return (
     <>
+      <ScrollIndicator />
       <Container>
         <Accordion />
       </Container>
